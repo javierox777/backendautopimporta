@@ -8,9 +8,9 @@ const URI = "mongodb://127.0.0.1/autoimporta"
 
 
 mongoose.connect(URI,{
-    useNewUrlParser: true ,
-    useUnifiedTopology: true,
-    useFindAndModify:false
+    // useNewUrlParser: true ,
+    // useUnifiedTopology: true,
+    // useFindAndModify:false
 })
 
 const connections = mongoose.connection

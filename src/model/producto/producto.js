@@ -1,11 +1,11 @@
 const {Schema, model} = require("mongoose")
 const schemaProducto = new Schema({
-    num:Number,
+    num:String,
     filename:String,
     path:String,
     marca:String, 
     modelo:String,
-    ano:Number, 
+    ano:String, 
     color:String, 
     shasis:String,
     transmicion:String,

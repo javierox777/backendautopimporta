@@ -2,7 +2,8 @@ const PRODUCTO = require("../../model/producto/producto");
 const moment = require("moment");
 require("moment/locale/es");
 const ctrls = {};
-const fs = require("fs")
+const fs = require("fs");
+const { stringify } = require("querystring");
 
 const hoy = moment().format("YYYY-MM-DD");
 
@@ -38,9 +39,9 @@ ctrls.createProduct = async (req, res) => {
     }
    
    
-
+    const productoCount = await PRODUCTO.countDocuments();
     const data = new PRODUCTO({
-      num,
+      num: productoCount + 1,
       filename: req.file.filename,
       path: "/products/" + req.file.filename,
       marca,
@@ -60,6 +61,8 @@ ctrls.createProduct = async (req, res) => {
       
     });
     await data.save();
+    const _idNum = data._id
+    
     return res.json({
       message: "success",
       body: data,
