@@ -2,8 +2,9 @@ const mongoose = require("mongoose")
 
 
 //const URI ="mongodb+srv://javierInventariomarco:12345@cluster0.o7lva.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-const URI = "mongodb://127.0.0.1/autoimporta"
+//const URI = "mongodb://127.0.0.1/autoimporta"
 //const URI ="mongodb://root:pass@25.1.215.239/local"
+const URI = "mongodb+srv://appautos3:oXtNqiNNSB8SWN1H@autos.broyrdg.mongodb.net/?retryWrites=true&w=majority"
 
 
 
